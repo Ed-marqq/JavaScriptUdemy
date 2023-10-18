@@ -1,29 +1,16 @@
-let perguntaNum = Number(prompt('Digite um número'))
-
-let nummost = document.getElementById('mostrador')
-
+const perguntaNumero = Number(prompt('Digite um número'))
+let mostradorNumero = document.getElementById('mostradorNumero')
 let texto = document.getElementById('texto')
-let arredBaixo = Math.floor(perguntaNum)
 
-//let p2 = document.getElementById('p2')
-let arredCima = Math.ceil(perguntaNum)
+mostradorNumero.innerHTML = `<p>Seu número é: ${perguntaNumero}</p>`
 
-//let p3 = document.getElementById('p3')
-let inteiro = Number.isInteger(perguntaNum)
-
-//let p4 = document.getElementById('p4')
-let raizQuad = Math.sqrt(perguntaNum)
-
-//let p5 = document.getElementById('p5')
-let nam = Number.isNaN(perguntaNum)
-
-//let p6 = document.getElementById('p6')
-let caDec = perguntaNum.toFixed(2)
-
-nummost.innerHTML = (`O seu número é ${perguntaNum}`)
-
-texto.innerHTML =
-
+texto.innerHTML = `<p>Raiz quadrada: ${Math.sqrt(perguntaNumero)}</p>`
+texto.innerHTML += `<p>${perguntaNumero} é inteiro: ${Number.isInteger()}</p>`
+texto.innerHTML += `<p>É NaN:${isNaN(perguntaNumero)}</p>`
+texto.innerHTML += `<p>Arredondando para baixo: ${Math.floor(perguntaNumero)}</p>`
+texto.innerHTML += `<p>Arredondando para cima: ${Math.ceil(perguntaNumero)}</p>`
+texto.innerHTML += `<p>Com duas casas decimais: ${perguntaNumero.toFixed(2)}</p>`
+//texto.innerHTML += `<p>${}</p>`
 
 
 
