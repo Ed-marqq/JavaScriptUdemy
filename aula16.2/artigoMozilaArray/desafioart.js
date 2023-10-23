@@ -5,7 +5,9 @@ function contar(){
     var total = 0
     var listaTxt = document.getElementById('lista')
     var totalPreco = document.getElementById('totalTxt')
-    var itemLista = document.getElementById('listItem')
+    listaTxt.innerHTML = ''
+    
+    var itemTexto = ''
 
     for(var i = 0; i<lista.length; i++){
         var array = lista[i].split(':')
@@ -14,13 +16,18 @@ function contar(){
         total+= preco
         itemTexto = nome + '-$' + preco
         
-        itemLista.textContent = itemTexto
+      
+        var listItem = document.createElement('li')
+        
+        listItem.textContent = itemTexto
+        listaTxt.appendChild(listItem)
+        
        
 
         
     }
     totalPreco.innerHTML = `Total ${total.toFixed(1)}`
-    listaTxt.innerHTML = ` ${itemTexto}`
+     
 
 }
 
